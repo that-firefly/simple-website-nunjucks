@@ -1,0 +1,157 @@
+{% set body_class = "tools" %}
+{% import "template-parts/_cards.njk" as card %} 
+
+{% extends "_layout.njk" %} 
+
+{% block content %} 
+
+<main class="full-width-site-container">
+  
+  <nav class="subnav"> 
+    <label for="services-nav-select">Jump To: </label>
+    <select id="services-nav-select">
+      <option value="#major-providers">Major Providers</option>
+      <option value="#static-hosting">Static Hosting</option>
+      <option value="#web-forms">Forms</option>
+      <option value="#payments">Payments</option>
+      <option value="#media-storage">Media Storage</option>
+      <option value="#email-sms">Email, SMS, & Notifications</option>
+      <option value="#cms">CMS's & Data Storage</option>
+      <option value="#real-time">Real Time</option>
+      <option value="#auth">Auth</option>
+      <option value="#monitoring">Monitoring</option>
+    </select>
+  </nav>
+  
+  <header class="section-header" id="major-providers">
+    <h2>
+      The Major Providers 
+    </h2>
+    <p>Need to calculate costs? Try the <a href="http://serverlesscalc.com/">Serverless Cost Calculator</a>.</p>
+  </header>
+
+  <div class="card-grid">
+    {% include "./service-categories/_major-providers.njk" %}
+  </div>
+  
+  
+  <header class="section-header" id="static-hosting">
+    <h2>
+      Static File Hosting
+    </h2>
+    <p>Any host can serve up static assets. These hosts specialize in it.</p>
+  </header>
+  
+  <div class="card-grid">
+    {% include "./service-categories/_static-hosting.njk" %}
+  </div>
+  
+  
+  <header class="section-header" id="web-forms">
+    <h2>
+      Forms
+    </h2>
+    <p>Form builder apps tend to work one of two ways. Either they host the form and you embed with an iframe, or you host the form and point the submission to&nbsp;them.</p>
+  </header>
+  
+  <div class="card-grid">
+    {% include "./service-categories/_forms.njk" %}
+  </div>
+  
+  
+  <header class="section-header" id="payments">
+    <h2>
+      Payments
+    </h2>
+    <p>Processing payments is sensitive stuff, but modern providers largely abstract that difficulty away.</p>
+  </header>
+  
+  <div class="card-grid">
+    {% include "./service-categories/_payments.njk" %}
+  </div>
+  
+  
+  <header class="section-header" id="media-storage">
+    <h2>
+      Media Storage
+    </h2>
+    <p>Honestly these services are pretty useful whether your website is using Serverless tech or not, but particularly useful when it is.</p>
+  </header>
+  
+  <div class="card-grid">
+    {% include "./service-categories/_media-storage.njk" %}
+  </div>
+  
+  
+  <header class="section-header" id="email-sms">
+    <h2>
+      Email / SMS / Notifications
+    </h2>
+  </header>
+  
+  <div class="card-grid">
+    {% include "./service-categories/_email-sms-notifications.njk" %}
+  </div>
+  
+  
+  <header class="section-header" id="cms">
+    <h2>
+      CMS's
+    </h2>
+    <p>You'd probably refer to these as "Managed Headless CMSs" in that they abstract both auth and database and UI for managing content away into a service and you access the content via API.</p>
+  </header>
+  
+  <div class="card-grid">
+    {% include "./service-categories/_cmss.njk" %}
+  </div>
+  
+  
+  <header class="section-header">
+    <h2>
+      Search
+    </h2>
+  </header>
+  
+  <div class="card-grid">
+    {% include "./service-categories/_search.njk" %}
+  </div>
+  
+  
+  <header class="section-header" id="real-time">
+    <h2>
+      Real Time
+    </h2>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</a> are the name of the game, but there are services to help. Imagine things like building your own chat or your own dashboards that update to new data without needing to be refreshed.</p>
+  </header>
+  
+  <div class="card-grid">
+    {% include "./service-categories/_realtime.njk" %}
+  </div>
+  
+  
+  <header class="section-header" id="auth">
+    <h2>
+      Auth
+    </h2>
+    <p><a href="https://oauth.net/">OAuth</a> is the name of the game, but there are services to help. For sites that have users or adminstrators that need to log in to do things.</p>
+  </header>
+  
+  <div class="card-grid">
+    {% include "./service-categories/_auth.njk" %}
+  </div>
+  
+  
+  <header class="section-header" id="monitoring">
+    <h2>
+      Monitoring
+    </h2>
+    <p>When <em>you run</em> a server, there are a variety of services out there in which you can install software on to monitor it. When you're working serverless land, you may need/want a service that can work without you installing things onto a server.</p>
+  </header>
+  
+  <div class="card-grid">
+    {% include "./service-categories/_monitoring.njk" %}
+  </div>
+    
+</main>
+
+{% endblock %}
